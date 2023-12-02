@@ -13,7 +13,8 @@ public class QuestPanel : MonoBehaviour
     public void SetPanel(QuestData _questData)
     {
         _conditionText.text = _questData._questName;
-        _buyBtnText.text = _questData._questValue.ToString();       // 나중에 방치형 금액 표시 로직으로 수정 필요  
+        _buyBtnText.text = _questData._questCostValue.ToString();       // 나중에 방치형 금액 표시 로직으로 수정 필요  
     }
     
+
 }

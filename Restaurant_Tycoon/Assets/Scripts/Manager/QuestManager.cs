@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class StageQuest
 {
-    public List<QuestData> _questuestDataList = new List<QuestData>();
+    public List<QuestData> _questDataList = new List<QuestData>();
 }
 
 public class QuestManager : MonoBehaviour
@@ -24,10 +24,10 @@ public class QuestManager : MonoBehaviour
     {
         StageQuest stageQuest = _stageQuestList[stage];
 
-        for (int i = 0; i < stageQuest._questuestDataList.Count; i++)
+        for (int i = 0; i < stageQuest._questDataList.Count; i++)
         {
             QuestPanel questPanel = Instantiate(_questPanelPrefab, transform.position, Quaternion.identity).GetComponent<QuestPanel>();
-            questPanel.SetPanel(stageQuest._questuestDataList[i]);
+            questPanel.SetPanel(stageQuest._questDataList[i]);
             questPanel.gameObject.transform.SetParent(_scrollviewContentRectTrans);
         }
     }
