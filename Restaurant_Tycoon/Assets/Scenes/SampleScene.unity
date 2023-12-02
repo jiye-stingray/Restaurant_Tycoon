@@ -625,7 +625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stageQuestList:
-  - _questuestDataList:
+  - _questDataList:
     - {fileID: 11400000, guid: 1adce1457565d4f45a8d851416b8058c, type: 2}
     - {fileID: 11400000, guid: 46fdc9932587a164d8d522844a12e6f0, type: 2}
     - {fileID: 11400000, guid: f28eede4c0853e345bce19b00594a8e1, type: 2}
