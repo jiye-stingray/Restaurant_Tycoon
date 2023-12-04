@@ -6,7 +6,7 @@ public static class GoldManager
 {
     static readonly string[] CurrentGoldString = new string[] { "", "A", "B", "C","D","E","F","G","H" ,"I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
 
-    public static string TOStringMoney(this double number)
+    public static string ToMoneyString(this double number)
     {
         string zero = "0";
 
