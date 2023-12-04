@@ -18,7 +18,7 @@ public class QuestPanel : MonoBehaviour
         _questData = questData;
 
         _conditionText.text = _questData._questName;
-        _buyBtnText.text = _questData._questCostValue.ToString();       // 나중에 방치형 금액 표시 로직으로 수정 필요  
+        _buyBtnText.text = GoldManager.TOStringMoney(_questData._questCostValue);       // 나중에 방치형 금액 표시 로직으로 수정 필요  
 
         QuestDel = null;
 

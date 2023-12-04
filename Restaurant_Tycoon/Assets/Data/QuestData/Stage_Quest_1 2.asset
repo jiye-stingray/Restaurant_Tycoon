@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Stage_Quest_1 2
   m_EditorClassIdentifier: 
   _questName: Buy the Coke
-  _questValue: 15000
+  _questCostValue: 5300
+  _questType: 0
+  _questApplicationValue: 0

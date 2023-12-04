@@ -13,7 +13,7 @@ public class QuestManager : MonoBehaviour
     [SerializeField] List<StageQuest> _stageQuestList = new List<StageQuest>();
 
     [SerializeField] GameObject _questPanelPrefab;
-    [SerializeField] RectTransform _scrollviewContentRectTrans;
+    [SerializeField] RectTransform _scrollviewContentRectTrans;     
 
     private void Start()
     {
