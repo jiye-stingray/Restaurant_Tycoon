@@ -13,8 +13,6 @@ public class QuestPanel : MonoBehaviour
     delegate void Quest();
     Quest QuestDel;
 
-    bool _isBtnDown;        // 버튼을 누르고 있는가
-
     public void SetPanel(QuestData questData)
     {
         _questData = questData;
@@ -59,16 +57,5 @@ public class QuestPanel : MonoBehaviour
     {
         Debug.Log(value);       // Temp
     }
-
-    public void BtnDown()
-    {
-        _isBtnDown = true;
-    }
-
-    public void BtnUp()
-    {
-        _isBtnDown = false;
-    }
-
 
 }
