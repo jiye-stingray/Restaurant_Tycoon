@@ -651,6 +651,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isBtnDown: 0
+  _sprite: {fileID: 1103100309}
 --- !u!1 &1329498289
 GameObject:
   m_ObjectHideFlags: 0
