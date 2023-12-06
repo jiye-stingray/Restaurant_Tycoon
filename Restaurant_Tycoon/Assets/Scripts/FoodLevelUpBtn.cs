@@ -9,6 +9,8 @@ public class FoodLevelUpBtn : MonoBehaviour
     [SerializeField] bool _isBtnDown;
     [SerializeField] Image _sprite;
 
+    [SerializeField] GameObject _particle;
+
     private async void LevelUp()
     {
         while(_isBtnDown)
@@ -16,6 +18,7 @@ public class FoodLevelUpBtn : MonoBehaviour
 
             _sprite.color = Color.black;
             Debug.Log("Level Up");
+            CreateParticle();
             await Task.Delay(200);
             _sprite.color = Color.white;
             await Task.Delay(300);
@@ -38,4 +41,11 @@ public class FoodLevelUpBtn : MonoBehaviour
         _isBtnDown = false;
     }
 
+    private void CreateParticle()
+    {
+        ParticleSystem p = Instantiate(_particle, transform.position, Quaternion.identity).GetComponent<ParticleSystem>();
+        p.Play();
+
+        Destroy(p.gameObject, p.duration);
+    }
 }

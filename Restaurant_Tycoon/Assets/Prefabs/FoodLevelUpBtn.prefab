@@ -91,6 +91,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isBtnDown: 0
   _sprite: {fileID: 8227148813087108610}
+  _particle: {fileID: 5287460345041355683, guid: 3fd92ea7f3d696546a36592683470c82, type: 3}
 --- !u!114 &2574106843129401218
 MonoBehaviour:
   m_ObjectHideFlags: 0
