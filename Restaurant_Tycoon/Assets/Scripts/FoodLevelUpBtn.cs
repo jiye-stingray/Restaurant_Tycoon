@@ -6,10 +6,10 @@ using UnityEngine.UI;
 
 public class FoodLevelUpBtn : MonoBehaviour
 {
-    [SerializeField] bool _isBtnDown;
-    [SerializeField] Image _sprite;
+    private bool _isBtnDown;
+    [SerializeField] public Image _sprite;
 
-    [SerializeField] GameObject _particle;
+    [SerializeField] private GameObject _particle;
 
     private async void LevelUp()
     {
