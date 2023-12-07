@@ -1,8 +1,10 @@
+using Cysharp.Threading.Tasks;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
+
 
 public class Worker : MonoBehaviour
 {
@@ -16,7 +18,7 @@ public class Worker : MonoBehaviour
     }
 
     float timer;
-    public async void MakeFood(float requiredTime)
+    public async UniTask MakeFood(float requiredTime)
     {
         while(timer <= requiredTime)
         {
