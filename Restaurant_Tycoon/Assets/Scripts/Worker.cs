@@ -1,4 +1,5 @@
 using Cysharp.Threading.Tasks;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -12,17 +13,28 @@ public class Worker : MonoBehaviour
 
     public float _requiredTime;
 
-    private void Start()
+    private async void Start()
     {
-        MakeFood(_requiredTime);
+        await MakeFood(_requiredTime);
     }
 
     float timer;
     public async UniTask MakeFood(float requiredTime)
     {
-        while(timer <= requiredTime)
+        
+        
+        _image.gameObject.SetActive(true);
+
+        while(timer < _requiredTime)
         {
-            
+            timer += Time.deltaTime;
+            _image.fillAmount =  (timer / requiredTime);
+
+            await UniTask.Yield(PlayerLoopTiming.Update);
         }
+
+        await UniTask.Delay(TimeSpan.FromSeconds(0.5f));
+
+        _image.gameObject.SetActive(false);
     }
 }
